@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    ZenTest (4.4.1)
     abstract (1.0.0)
     actionmailer (3.0.3)
       actionpack (= 3.0.3)
@@ -30,6 +31,10 @@ GEM
     activesupport (3.0.3)
     annotate-models (1.0.4)
     arel (2.0.6)
+    autotest (4.4.6)
+      ZenTest (>= 4.4.1)
+    autotest-rails (4.1.0)
+      ZenTest
     builder (2.1.2)
     compass (0.10.6)
       haml (>= 3.0.4)
@@ -103,6 +108,8 @@ PLATFORMS
 
 DEPENDENCIES
   annotate-models (= 1.0.4)
+  autotest
+  autotest-rails
   compass
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
