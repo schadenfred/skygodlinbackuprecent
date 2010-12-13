@@ -4,7 +4,13 @@
     %ul
       %li= link_to_unless_current "Home", root_path
       |
+      - if signed_in?
+        %li= link_to_unless_current "Profile", current_user
+        |
       %li= link_to_unless_current "Help", help_path
       |
-      %li= link_to_unless_current "Sign in", '#'
+      - if signed_in?
+        %li= link_to "Sign out", signout_path, :method => :delete
+      - else
+        %li= link_to_unless_current "Sign in", signin_path
 
