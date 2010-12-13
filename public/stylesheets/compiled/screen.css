@@ -216,3 +216,13 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+
+/* line 234, ../../../app/stylesheets/screen.scss */
+ul.users {
+  margin-top: 1em;
+}
+
+/* line 238, ../../../app/stylesheets/screen.scss */
+.users li {
+  list-style: none;
+}

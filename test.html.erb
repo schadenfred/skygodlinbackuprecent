@@ -1,18 +1,18 @@
-<header>
-  <%= link_to logo, root_path %>
-  <nav class="round">
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Profile", current_user %></li>
-      <% end %>
-      <li><%= link_to "Help", help_path %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
-      <% else %>
-      <li><%= link_to "Sign in", signin_path %></li>
-      <% end %>
-    </ul>
-  </nav>
-</header>
+<%= render 'shared/error_messages', :object => f.object %>
+<div class="field">
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :email %><br />
+  <%= f.text_field :email %>
+</div>
+<div class="field">
+  <%= f.label :password %><br />
+  <%= f.password_field :password %>
+</div>
+<div class="field">
+  <%= f.label :password_confirmation, "Confirmation" %><br />
+  <%= f.password_field :password_confirmation %>
+</div>
 
