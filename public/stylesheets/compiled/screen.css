@@ -137,8 +137,34 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* line 161, ../../../app/stylesheets/screen.scss */
+/* line 160, ../../../app/stylesheets/screen.scss */
 footer nav {
   float: none;
+}
+
+/* User show page */
+/* line 167, ../../../app/stylesheets/screen.scss */
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* line 172, ../../../app/stylesheets/screen.scss */
+td.main {
+  width: 70%;
+  padding: 1em;
+}
+
+/* line 177, ../../../app/stylesheets/screen.scss */
+td.sidebar {
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+  background: #ffc;
+}
+
+/* line 184, ../../../app/stylesheets/screen.scss */
+.profile img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
 }
