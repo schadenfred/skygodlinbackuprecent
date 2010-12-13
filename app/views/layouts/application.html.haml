@@ -10,6 +10,8 @@
       %section.round
         %p{:style => "color: green"}= notice
         %p{:style => "color: red"}= alert
+        - flash.each do |key, value|
+          %div{:class => "flash #{key}"}= value
         = yield
       = render 'layouts/footer'
       = debug(params) if Rails.env.development?
