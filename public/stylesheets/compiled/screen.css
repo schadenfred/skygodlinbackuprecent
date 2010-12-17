@@ -1,71 +1,71 @@
-/* line 26, ../../../app/stylesheets/screen.scss */
+/* line 28, ../../../app/stylesheets/screen.scss */
 .container {
   width: 710px;
 }
 
-/* line 40, ../../../app/stylesheets/screen.scss */
+/* line 42, ../../../app/stylesheets/screen.scss */
 body {
-  background: #ccff99;
+  background: #99cc00;
 }
 
-/* line 44, ../../../app/stylesheets/screen.scss */
+/* line 46, ../../../app/stylesheets/screen.scss */
 header {
   padding-top: 20px;
 }
-/* line 47, ../../../app/stylesheets/screen.scss */
+/* line 49, ../../../app/stylesheets/screen.scss */
 header img {
   padding: 1em;
   background: #fff;
 }
 
-/* line 53, ../../../app/stylesheets/screen.scss */
+/* line 55, ../../../app/stylesheets/screen.scss */
 section {
   margin-top: 1em;
   font-size: 120%;
   padding: 20px;
   background: #fff;
 }
-/* line 59, ../../../app/stylesheets/screen.scss */
+/* line 61, ../../../app/stylesheets/screen.scss */
 section h1 {
   font-size: 200%;
 }
 
 /* Links */
-/* line 66, ../../../app/stylesheets/screen.scss */
+/* line 68, ../../../app/stylesheets/screen.scss */
 a {
   color: #09c;
   text-decoration: none;
 }
-/* line 70, ../../../app/stylesheets/screen.scss */
+/* line 72, ../../../app/stylesheets/screen.scss */
 a:hover {
   color: #069;
   text-decoration: underline;
 }
-/* line 75, ../../../app/stylesheets/screen.scss */
+/* line 77, ../../../app/stylesheets/screen.scss */
 a:visited {
   color: #069;
 }
 
 /* Navigation */
-/* line 82, ../../../app/stylesheets/screen.scss */
+/* line 84, ../../../app/stylesheets/screen.scss */
 nav {
   float: right;
   background-color: white;
   padding: 0 0.7em;
   white-space: nowrap;
 }
-/* line 88, ../../../app/stylesheets/screen.scss */
+/* line 90, ../../../app/stylesheets/screen.scss */
 nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 92, ../../../app/stylesheets/screen.scss */
+/* line 94, ../../../app/stylesheets/screen.scss */
 nav ul li {
   list-style-type: none;
   display: inline-block;
   padding: 0.2em 0;
 }
-/* line 97, ../../../app/stylesheets/screen.scss */
+/* line 99, ../../../app/stylesheets/screen.scss */
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
@@ -75,23 +75,23 @@ nav ul li a {
   -o-transition: height 1s ease-out, opacity 1s ease;
   transition: height 1s ease-out, opacity 1s ease;
 }
-/* line 107, ../../../app/stylesheets/screen.scss */
+/* line 109, ../../../app/stylesheets/screen.scss */
 nav ul li a:hover {
   text-decoration: none;
   opacity: 1;
 }
-/* line 112, ../../../app/stylesheets/screen.scss */
+/* line 114, ../../../app/stylesheets/screen.scss */
 nav ul li a:visited {
   color: #09c;
 }
 
 /* Sign up button */
-/* line 122, ../../../app/stylesheets/screen.scss */
+/* line 124, ../../../app/stylesheets/screen.scss */
 a.signup_button {
-  -moz-box-shadow: #333333 4px 2px 7px 2px;
-  -webkit-box-shadow: #333333 4px 2px 7px 2px;
-  -o-box-shadow: #333333 4px 2px 7px 2px;
-  box-shadow: #333333 4px 2px 7px 2px;
+  -moz-box-shadow: #333333 1px 1px 4px 2px;
+  -webkit-box-shadow: #333333 1px 1px 4px 2px;
+  -o-box-shadow: #333333 1px 1px 4px 2px;
+  box-shadow: #333333 1px 1px 4px 2px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -108,14 +108,14 @@ a.signup_button {
   -o-transition-property: opacity;
   transition-property: opacity;
 }
-/* line 139, ../../../app/stylesheets/screen.scss */
+/* line 141, ../../../app/stylesheets/screen.scss */
 a.signup_button:hover {
   opacity: 1;
   color: #eee;
 }
 
 /* Round corners */
-/* line 148, ../../../app/stylesheets/screen.scss */
+/* line 150, ../../../app/stylesheets/screen.scss */
 .round {
   -webkit-border-radius: 10px 10px;
   -moz-border-radius: 10px / 10px;
@@ -123,13 +123,13 @@ a.signup_button:hover {
   -ms-border-radius: 10px / 10px;
   -khtml-border-radius: 10px / 10px;
   border-radius: 10px / 10px;
-  -moz-box-shadow: #333333 4px 2px 7px 2px;
-  -webkit-box-shadow: #333333 4px 2px 7px 2px;
-  -o-box-shadow: #333333 4px 2px 7px 2px;
-  box-shadow: #333333 4px 2px 7px 2px;
+  -moz-box-shadow: #333333 1px 1px 4px 2px;
+  -webkit-box-shadow: #333333 1px 1px 4px 2px;
+  -o-box-shadow: #333333 1px 1px 4px 2px;
+  box-shadow: #333333 1px 1px 4px 2px;
 }
 
-/* line 153, ../../../app/stylesheets/screen.scss */
+/* line 155, ../../../app/stylesheets/screen.scss */
 footer {
   text-align: center;
   margin-top: 10px;
@@ -137,25 +137,25 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 160, ../../../app/stylesheets/screen.scss */
+/* line 162, ../../../app/stylesheets/screen.scss */
 footer nav {
   float: none;
 }
 
 /* User show page */
-/* line 167, ../../../app/stylesheets/screen.scss */
+/* line 169, ../../../app/stylesheets/screen.scss */
 table.profile {
   width: 100%;
   margin-bottom: 0;
 }
 
-/* line 172, ../../../app/stylesheets/screen.scss */
+/* line 174, ../../../app/stylesheets/screen.scss */
 td.main {
   width: 70%;
   padding: 1em;
 }
 
-/* line 177, ../../../app/stylesheets/screen.scss */
+/* line 179, ../../../app/stylesheets/screen.scss */
 td.sidebar {
   width: 30%;
   padding: 1em;
@@ -163,30 +163,30 @@ td.sidebar {
   background: #ffc;
 }
 
-/* line 184, ../../../app/stylesheets/screen.scss */
+/* line 186, ../../../app/stylesheets/screen.scss */
 .profile img.gravatar {
   border: 1px solid #999;
   margin-bottom: -15px;
 }
 
-/* line 189, ../../../app/stylesheets/screen.scss */
+/* line 191, ../../../app/stylesheets/screen.scss */
 div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 193, ../../../app/stylesheets/screen.scss */
+/* line 195, ../../../app/stylesheets/screen.scss */
 .field_with_errors {
   margin-top: 10px;
   padding: 2px;
   background-color: red;
   display: table;
 }
-/* line 199, ../../../app/stylesheets/screen.scss */
+/* line 201, ../../../app/stylesheets/screen.scss */
 .field_with_errors label {
   color: #fff;
 }
 
-/* line 204, ../../../app/stylesheets/screen.scss */
+/* line 206, ../../../app/stylesheets/screen.scss */
 #error_explanation {
   width: 400px;
   border: 2px solid red;
@@ -195,7 +195,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 212, ../../../app/stylesheets/screen.scss */
+/* line 214, ../../../app/stylesheets/screen.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -205,24 +205,91 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-/* line 222, ../../../app/stylesheets/screen.scss */
+/* line 224, ../../../app/stylesheets/screen.scss */
 #error_explanation p {
   color: #333;
   margin-bottom: 0;
   padding: 5px;
 }
-/* line 228, ../../../app/stylesheets/screen.scss */
+/* line 230, ../../../app/stylesheets/screen.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
 }
 
-/* line 234, ../../../app/stylesheets/screen.scss */
+/* line 236, ../../../app/stylesheets/screen.scss */
 ul.users {
   margin-top: 1em;
 }
 
-/* line 238, ../../../app/stylesheets/screen.scss */
+/* line 240, ../../../app/stylesheets/screen.scss */
 .users li {
   list-style: none;
+}
+
+/* line 244, ../../../app/stylesheets/screen.scss */
+h1.micropost {
+  margin-bottom: 0.3em;
+}
+
+/* line 248, ../../../app/stylesheets/screen.scss */
+table.microposts {
+  margin-top: 1em;
+}
+
+/* line 252, ../../../app/stylesheets/screen.scss */
+table.microposts tr {
+  height: 70px;
+}
+
+/* line 256, ../../../app/stylesheets/screen.scss */
+table.microposts tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+/* line 262, ../../../app/stylesheets/screen.scss */
+table.microposts tr td.micropost {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+/* line 268, ../../../app/stylesheets/screen.scss */
+table.microposts tr td.micropost span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+/* line 274, ../../../app/stylesheets/screen.scss */
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+/* line 278, ../../../app/stylesheets/screen.scss */
+div.user_info a {
+  text-decoration: none;
+}
+
+/* line 282, ../../../app/stylesheets/screen.scss */
+div.user_info span.user_name {
+  position: absolute;
+}
+
+/* line 286, ../../../app/stylesheets/screen.scss */
+div.user_info span.microposts {
+  font-size: 80%;
+}
+
+/* line 290, ../../../app/stylesheets/screen.scss */
+form.new_micropost {
+  margin-bottom: 2em;
+}
+
+/* line 294, ../../../app/stylesheets/screen.scss */
+form.new_micropost textarea {
+  height: 4em;
+  margin-bottom: 0;
 }
