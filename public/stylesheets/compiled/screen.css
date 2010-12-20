@@ -88,10 +88,10 @@ nav ul li a:visited {
 /* Sign up button */
 /* line 124, ../../../app/stylesheets/screen.scss */
 a.signup_button {
-  -moz-box-shadow: #333333 1px 1px 4px 2px;
-  -webkit-box-shadow: #333333 1px 1px 4px 2px;
-  -o-box-shadow: #333333 1px 1px 4px 2px;
-  box-shadow: #333333 1px 1px 4px 2px;
+  -moz-box-shadow: #333333 2px 2px 4px 4px;
+  -webkit-box-shadow: #333333 2px 2px 4px 4px;
+  -o-box-shadow: #333333 2px 2px 4px 4px;
+  box-shadow: #333333 2px 2px 4px 4px;
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -123,10 +123,10 @@ a.signup_button:hover {
   -ms-border-radius: 10px / 10px;
   -khtml-border-radius: 10px / 10px;
   border-radius: 10px / 10px;
-  -moz-box-shadow: #333333 1px 1px 4px 2px;
-  -webkit-box-shadow: #333333 1px 1px 4px 2px;
-  -o-box-shadow: #333333 1px 1px 4px 2px;
-  box-shadow: #333333 1px 1px 4px 2px;
+  -moz-box-shadow: #333333 2px 2px 4px 4px;
+  -webkit-box-shadow: #333333 2px 2px 4px 4px;
+  -o-box-shadow: #333333 2px 2px 4px 4px;
+  box-shadow: #333333 2px 2px 4px 4px;
 }
 
 /* line 155, ../../../app/stylesheets/screen.scss */

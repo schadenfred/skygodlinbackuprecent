@@ -9,7 +9,7 @@ gem 'haml-rails'
 gem 'compass'
 gem 'autotest'
 gem 'autotest-rails'
-gem 'jquery-rails'
+gem 'jquery-rails',             '>= 0.2.6'
 
 group :development do
   gem 'rspec-rails', '2.1.0'

@@ -1,160 +1,419 @@
-/*
- * jquery-ujs
- *
- * http://github.com/rails/jquery-ujs/blob/master/src/rails.js
- *
- * This rails.js file supports jQuery 1.4.3 and 1.4.4 .
- *
- */
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-jQuery(function ($) {
-    var csrf_token = $('meta[name=csrf-token]').attr('content'),
-        csrf_param = $('meta[name=csrf-param]').attr('content');
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Secure source code hosting and collaborative development - GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
 
-    $.fn.extend({
-        /**
-         * Triggers a custom event on an element and returns the event result
-         * this is used to get around not being able to ensure callbacks are placed
-         * at the end of the chain.
-         *
-         * TODO: deprecate with jQuery 1.4.2 release, in favor of subscribing to our
-         *       own events and placing ourselves at the end of the chain.
-         */
-        triggerAndReturn: function (name, data) {
-            var event = new $.Event(name);
-            this.trigger(event, data);
+    <link href="https://assets1.github.com/stylesheets/bundle_common.css?9be3b31760b2ed1e0983740b292778ab7067fa37" media="screen" rel="stylesheet" type="text/css" />
+<link href="https://assets0.github.com/stylesheets/bundle_github.css?9be3b31760b2ed1e0983740b292778ab7067fa37" media="screen" rel="stylesheet" type="text/css" />
 
-            return event.result !== false;
-        },
+    <script type="text/javascript" charset="utf-8">
+      var GitHub = {}
+      var github_user = null
+      
+    </script>
+    <script src="https://assets2.github.com/javascripts/jquery/jquery-1.4.2.min.js?9be3b31760b2ed1e0983740b292778ab7067fa37" type="text/javascript"></script>
+    <script src="https://assets2.github.com/javascripts/bundle_common.js?9be3b31760b2ed1e0983740b292778ab7067fa37" type="text/javascript"></script>
+<script src="https://assets3.github.com/javascripts/bundle_github.js?9be3b31760b2ed1e0983740b292778ab7067fa37" type="text/javascript"></script>
 
-        /**
-         * Handles execution of remote calls. Provides following callbacks:
-         *
-         * - ajax:beforeSend  - is executed before firing ajax call
-         * - ajax:success  - is executed when status is success
-         * - ajax:complete - is executed when the request finishes, whether in failure or success.
-         * - ajax:error    - is execute in case of error
-         */
-        callRemote: function () {
-            var el      = this,
-                method  = el.attr('method') || el.attr('data-method') || 'GET',
-                url     = el.attr('action') || el.attr('href'),
-                dataType  = el.attr('data-type')  || ($.ajaxSettings && $.ajaxSettings.dataType);
 
-            if (url === undefined) {
-                throw "No URL specified for remote call (action or href must be present).";
-            } else {
-                    var $this = $(this), data = el.is('form') ? el.serializeArray() : [];
+        <script type="text/javascript" charset="utf-8">
+      GitHub.spy({
+        repo: ""
+      })
+    </script>
 
-                    $.ajax({
-                        url: url,
-                        data: data,
-                        dataType: dataType,
-                        type: method.toUpperCase(),
-                        beforeSend: function (xhr) {
-                            xhr.setRequestHeader("Accept", "text/javascript");
-                            if ($this.triggerHandler('ajax:beforeSend') === false) {
-                              return false;
-                            }
-                        },
-                        success: function (data, status, xhr) {
-                            el.trigger('ajax:success', [data, status, xhr]);
-                        },
-                        complete: function (xhr) {
-                            el.trigger('ajax:complete', xhr);
-                        },
-                        error: function (xhr, status, error) {
-                            el.trigger('ajax:error', [xhr, status, error]);
-                        }
-                    });
-            }
+    
+
+            <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3769691-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+
+  </head>
+
+  
+
+  <body class="logged_out ">
+    
+
+    
+      <script type="text/javascript">
+        var _kmq = _kmq || [];
+        function _kms(u){
+          var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+          s.src = u; f.parentNode.insertBefore(s, f);
         }
-    });
+        _kms('//i.kissmetrics.com/i.js');_kms('//doug1izaerwt3.cloudfront.net/406e8bf3a2b8846ead55afb3cfaf6664523e3a54.1.js');
+      </script>
+    
 
-    /**
-     *  confirmation handler
-     */
+    
 
-    $('body').delegate('a[data-confirm], button[data-confirm], input[data-confirm]', 'click.rails', function () {
-        var el = $(this);
-        if (el.triggerAndReturn('confirm')) {
-            if (!confirm(el.attr('data-confirm'))) {
-                return false;
-            }
-        }
-    });
+    
 
+    
 
+    <div class="" id="main">
+      <div id="header" class="true">
+        
+          <a class="logo boring" href="https://github.com">
+            <img src="/images/modules/header/logov3.png?changed" class="default" alt="github" />
+            <![if !IE]>
+            <img src="/images/modules/header/logov3-hover.png" class="hover" alt="github" />
+            <![endif]>
+          </a>
+        
+        
+        <div class="topsearch">
+  
+    <ul class="nav logged_out">
+      <li class="pricing"><a href="/plans">Pricing and Signup</a></li>
+      <li><a href="/explore">Explore GitHub</a></li>
+      <li><a href="/features">Features</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="https://github.com/login">Login</a></li>
+    </ul>
+  
+</div>
 
-    /**
-     * remote handlers
-     */
-    $('form[data-remote]').live('submit.rails', function (e) {
-        $(this).callRemote();
-        e.preventDefault();
-    });
+      </div>
 
-    $('a[data-remote],input[data-remote]').live('click.rails', function (e) {
-        $(this).callRemote();
-        e.preventDefault();
-    });
+      
+      
+        <div class="site">
+          <div id="error" class="status404">
+  <img src="/images/error/octocat_happy.gif" alt="Octocat is sad" />
+  <h1>That page doesn't exist!</h1>
+</div>
 
-    /**
-     * <%= link_to "Delete", user_path(@user), :method => :delete, :confirm => "Are you sure?" %>
-     *
-     * <a href="/users/5" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Delete</a>
-     */
-    $('a[data-method]:not([data-remote])').live('click.rails', function (e){
-        var link = $(this),
-            href = link.attr('href'),
-            method = link.attr('data-method'),
-            form = $('<form method="post" action="'+href+'"></form>'),
-            metadata_input = '<input name="_method" value="'+method+'" type="hidden" />';
+        </div>
+      
+    </div>
 
-        if (csrf_param !== undefined && csrf_token !== undefined) {
-            metadata_input += '<input name="'+csrf_param+'" value="'+csrf_token+'" type="hidden" />';
-        }
+    <div id="footer" class="clearfix">
+      <div class="site">
+        <div class="sponsor">
+          <a href="http://www.rackspace.com" class="logo">
+            <img alt="Dedicated Server" src="https://assets0.github.com/images/modules/footer/rackspace_logo.png?v2?9be3b31760b2ed1e0983740b292778ab7067fa37" />
+          </a>
+          Powered by the <a href="http://www.rackspace.com ">Dedicated
+          Servers</a> and<br/> <a href="http://www.rackspacecloud.com">Cloud
+          Computing</a> of Rackspace Hosting<span>&reg;</span>
+        </div>
 
-        form.hide()
-            .append(metadata_input)
-            .appendTo('body');
+        <ul class="links">
+          <li class="blog"><a href="https://github.com/blog">Blog</a></li>
+          <li><a href="http://support.github.com">Support</a></li>
+          <li><a href="https://github.com/training">Training</a></li>
+          <li><a href="http://jobs.github.com">Job Board</a></li>
+          <li><a href="http://shop.github.com">Shop</a></li>
+          <li><a href="https://github.com/contact">Contact</a></li>
+          <li><a href="http://develop.github.com">API</a></li>
+          <li><a href="http://status.github.com">Status</a></li>
+        </ul>
+        <ul class="sosueme">
+          <li class="main">&copy; 2010 <span id="_rrt" title="0.02854s from fe1.rs.github.com">GitHub</span> Inc. All rights reserved.</li>
+          <li><a href="/site/terms">Terms of Service</a></li>
+          <li><a href="/site/privacy">Privacy</a></li>
+          <li><a href="https://github.com/security">Security</a></li>
+        </ul>
+      </div>
+    </div><!-- /#footer -->
 
-        e.preventDefault();
-        form.submit();
-    });
+    
+      
+      
+        <!-- current locale:  -->
+        <div class="locales">
+          <div class="site">
 
-    /**
-     * disable-with handlers
-     */
-    var disable_with_input_selector           = 'input[data-disable-with]',
-        disable_with_form_remote_selector     = 'form[data-remote]:has('       + disable_with_input_selector + ')',
-        disable_with_form_not_remote_selector = 'form:not([data-remote]):has(' + disable_with_input_selector + ')';
+            <ul class="choices clearfix limited-locales">
+              <li><span class="current">English</span></li>
+              
+                  <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=fr">Français</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=ja">日本語</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=pt-BR">Português (BR)</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=ru">Русский</a></li>
+              
+                  <li><a rel="nofollow" href="?locale=zh">中文</a></li>
+              
+              <li class="all"><a href="#" class="minibutton btn-forward js-all-locales"><span><span class="icon"></span>See all available languages</span></a></li>
+            </ul>
 
-    var disable_with_input_function = function () {
-        $(this).find(disable_with_input_selector).each(function () {
-            var input = $(this);
-            input.data('enable-with', input.val())
-                .attr('value', input.attr('data-disable-with'))
-                .attr('disabled', 'disabled');
-        });
-    };
+            <div class="all-locales clearfix">
+              <h3>Your current locale selection: <strong>English</strong>. Choose another?</h3>
+              
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=en">English</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=af">Afrikaans</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ca">Català</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=cs">Čeština</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=de">Deutsch</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=es">Español</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=fr">Français</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=hr">Hrvatski</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=id">Indonesia</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=it">Italiano</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ja">日本語</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=nl">Nederlands</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=no">Norsk</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=pl">Polski</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=pt-BR">Português (BR)</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=ru">Русский</a></li>
+                  
+                </ul>
+              
+                <ul class="choices">
+                  
+                      <li><a rel="nofollow" href="?locale=sr">Српски</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=sv">Svenska</a></li>
+                  
+                      <li><a rel="nofollow" href="?locale=zh">中文</a></li>
+                  
+                </ul>
+              
+            </div>
 
-    $(disable_with_form_remote_selector).live('ajax:before.rails', disable_with_input_function);
-    $(disable_with_form_not_remote_selector).live('submit.rails', disable_with_input_function);
+          </div>
+          <div class="fade"></div>
+        </div>
+      
+    
 
-    $(disable_with_form_remote_selector).live('ajax:complete.rails', function () {
-        $(this).find(disable_with_input_selector).each(function () {
-            var input = $(this);
-            input.removeAttr('disabled')
-                 .val(input.data('enable-with'));
-        });
-    });
+    <script>window._auth_token = "8948f3dce9ab02f850f1e6ef3ae227cdb603f269"</script>
+    <div id="keyboard_shortcuts_pane" style="display:none">
+  <h2>Keyboard Shortcuts</h2>
 
-    var jqueryVersion = $().jquery;
+  <div class="columns threecols">
+    <div class="column first">
+      <h3>Site wide shortcuts</h3>
+      <dl class="keyboard-mappings">
+        <dt>s</dt>
+        <dd>Focus site search</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>?</dt>
+        <dd>Bring up this help dialog</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column middle">
+      <h3>Commit list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>t</dt>
+        <dd>Open tree</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>p</dt>
+        <dd>Open parent</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>c <em>or</em> o <em>or</em> enter</dt>
+        <dd>Open commit</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column last">
+      <h3>Pull request list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+    </div><!-- /.columns.last -->
+  </div><!-- /.columns.equacols -->
 
-	if (!( (jqueryVersion === '1.4.3') || (jqueryVersion === '1.4.4'))){
-		alert('This rails.js does not support the jQuery version you are using. Please read documentation.');
-	}
+  <div class="rule"></div>
 
+  <h3>Issues</h3>
 
-});
+  <div class="columns threecols">
+    <div class="column first">
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>x</dt>
+        <dd>Toggle select target</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column middle">
+      <dl class="keyboard-mappings">
+        <dt>I</dt>
+        <dd>Mark selected as read</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>U</dt>
+        <dd>Mark selected as unread</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>e</dt>
+        <dd>Close selected</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>y</dt>
+        <dd>Remove selected from view</dd>
+      </dl>
+    </div><!-- /.column.middle -->
+    <div class="column last">
+      <dl class="keyboard-mappings">
+        <dt>c</dt>
+        <dd>Create issue</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>l</dt>
+        <dd>Create label</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>i</dt>
+        <dd>Back to inbox</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>u</dt>
+        <dd>Back to issues</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>/</dt>
+        <dd>Focus issues search</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="rule"></div>
+
+  <h3>Network Graph</h3>
+  <div class="columns equacols">
+    <div class="column first">
+      <dl class="keyboard-mappings">
+        <dt>← <em>or</em> h</dt>
+        <dd>Scroll left</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>→ <em>or</em> l</dt>
+        <dd>Scroll right</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>↑ <em>or</em> k</dt>
+        <dd>Scroll up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>↓ <em>or</em> j</dt>
+        <dd>Scroll down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>t</dt>
+        <dd>Toggle visibility of head labels</dd>
+      </dl>
+    </div><!-- /.column.first -->
+    <div class="column last">
+      <dl class="keyboard-mappings">
+        <dt>shift ← <em>or</em> shift h</dt>
+        <dd>Scroll all the way left</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift → <em>or</em> shift l</dt>
+        <dd>Scroll all the way right</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift ↑ <em>or</em> shift k</dt>
+        <dd>Scroll all the way up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>shift ↓ <em>or</em> shift j</dt>
+        <dd>Scroll all the way down</dd>
+      </dl>
+    </div><!-- /.column.last -->
+  </div>
+
+</div>
+    
+
+    <!--[if IE 8]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie8")
+    </script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie7")
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript">
+      _kmq.push(['trackClick', 'entice-signup-button', 'Entice banner clicked']);
+      
+    </script>
+    
+  </body>
+</html>
