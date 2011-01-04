@@ -168,25 +168,29 @@ td.sidebar {
   border: 1px solid #999;
   margin-bottom: -15px;
 }
+/* line 190, ../../../app/stylesheets/screen.scss */
+.profile img.gravatar td {
+  margin-bottom: 15px;
+}
 
-/* line 191, ../../../app/stylesheets/screen.scss */
+/* line 195, ../../../app/stylesheets/screen.scss */
 div.field, div.actions {
   margin-bottom: 10px;
 }
 
-/* line 195, ../../../app/stylesheets/screen.scss */
+/* line 199, ../../../app/stylesheets/screen.scss */
 .field_with_errors {
   margin-top: 10px;
   padding: 2px;
   background-color: red;
   display: table;
 }
-/* line 201, ../../../app/stylesheets/screen.scss */
+/* line 205, ../../../app/stylesheets/screen.scss */
 .field_with_errors label {
   color: #fff;
 }
 
-/* line 206, ../../../app/stylesheets/screen.scss */
+/* line 210, ../../../app/stylesheets/screen.scss */
 #error_explanation {
   width: 400px;
   border: 2px solid red;
@@ -195,7 +199,7 @@ div.field, div.actions {
   margin-bottom: 20px;
   background-color: #f0f0f0;
 }
-/* line 214, ../../../app/stylesheets/screen.scss */
+/* line 218, ../../../app/stylesheets/screen.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -205,90 +209,162 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-/* line 224, ../../../app/stylesheets/screen.scss */
+/* line 228, ../../../app/stylesheets/screen.scss */
 #error_explanation p {
   color: #333;
   margin-bottom: 0;
   padding: 5px;
 }
-/* line 230, ../../../app/stylesheets/screen.scss */
+/* line 234, ../../../app/stylesheets/screen.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
 }
 
-/* line 236, ../../../app/stylesheets/screen.scss */
+/* line 240, ../../../app/stylesheets/screen.scss */
 ul.users {
   margin-top: 1em;
 }
 
-/* line 240, ../../../app/stylesheets/screen.scss */
+/* line 244, ../../../app/stylesheets/screen.scss */
 .users li {
   list-style: none;
 }
 
-/* line 244, ../../../app/stylesheets/screen.scss */
+/* line 250, ../../../app/stylesheets/screen.scss */
+h1.reviews {
+  margin-bottom: 0.3em;
+}
+
+/* line 254, ../../../app/stylesheets/screen.scss */
+table.reviews {
+  margin-top: 1em;
+}
+/* line 257, ../../../app/stylesheets/screen.scss */
+table.reviews tr {
+  height: 70px;
+}
+/* line 259, ../../../app/stylesheets/screen.scss */
+table.reviews tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+/* line 265, ../../../app/stylesheets/screen.scss */
+table.reviews tr td.review {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+/* line 270, ../../../app/stylesheets/screen.scss */
+table.reviews tr td.review span.category {
+  font-weight: bold;
+  font-style: italic;
+}
+/* line 275, ../../../app/stylesheets/screen.scss */
+table.reviews tr td.review span.content {
+  font-weight: normal;
+}
+/* line 279, ../../../app/stylesheets/screen.scss */
+table.reviews tr td.review span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+/* line 284, ../../../app/stylesheets/screen.scss */
+table.reviews tr td.review span.timestamp .gravatar {
+  margin-bottom: -5px;
+}
+
+/* line 293, ../../../app/stylesheets/screen.scss */
+div.user_info img {
+  padding-right: 0.1em;
+}
+/* line 297, ../../../app/stylesheets/screen.scss */
+div.user_info a {
+  text-decoration: none;
+}
+/* line 301, ../../../app/stylesheets/screen.scss */
+div.user_info span.user_name {
+  position: absolute;
+}
+/* line 305, ../../../app/stylesheets/screen.scss */
+div.user_info span.reviews {
+  font-size: 80%;
+}
+
+/* line 310, ../../../app/stylesheets/screen.scss */
+form.new_review {
+  margin-bottom: 2em;
+}
+/* line 312, ../../../app/stylesheets/screen.scss */
+form.new_review textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+
+/* line 320, ../../../app/stylesheets/screen.scss */
 h1.micropost {
   margin-bottom: 0.3em;
 }
 
-/* line 248, ../../../app/stylesheets/screen.scss */
+/* line 324, ../../../app/stylesheets/screen.scss */
 table.microposts {
   margin-top: 1em;
 }
 
-/* line 252, ../../../app/stylesheets/screen.scss */
+/* line 328, ../../../app/stylesheets/screen.scss */
 table.microposts tr {
   height: 70px;
 }
 
-/* line 256, ../../../app/stylesheets/screen.scss */
+/* line 332, ../../../app/stylesheets/screen.scss */
 table.microposts tr td.gravatar {
   border-top: 1px solid #ccc;
   vertical-align: top;
   width: 50px;
 }
 
-/* line 262, ../../../app/stylesheets/screen.scss */
+/* line 338, ../../../app/stylesheets/screen.scss */
 table.microposts tr td.micropost {
   border-top: 1px solid #ccc;
   vertical-align: top;
   padding-top: 10px;
 }
 
-/* line 268, ../../../app/stylesheets/screen.scss */
+/* line 344, ../../../app/stylesheets/screen.scss */
 table.microposts tr td.micropost span.timestamp {
   display: block;
   font-size: 85%;
   color: #666;
 }
 
-/* line 274, ../../../app/stylesheets/screen.scss */
+/* line 350, ../../../app/stylesheets/screen.scss */
 div.user_info img {
   padding-right: 0.1em;
 }
 
-/* line 278, ../../../app/stylesheets/screen.scss */
+/* line 354, ../../../app/stylesheets/screen.scss */
 div.user_info a {
   text-decoration: none;
 }
 
-/* line 282, ../../../app/stylesheets/screen.scss */
+/* line 358, ../../../app/stylesheets/screen.scss */
 div.user_info span.user_name {
   position: absolute;
 }
 
-/* line 286, ../../../app/stylesheets/screen.scss */
+/* line 362, ../../../app/stylesheets/screen.scss */
 div.user_info span.microposts {
   font-size: 80%;
 }
 
-/* line 290, ../../../app/stylesheets/screen.scss */
+/* line 366, ../../../app/stylesheets/screen.scss */
 form.new_micropost {
   margin-bottom: 2em;
 }
 
-/* line 294, ../../../app/stylesheets/screen.scss */
+/* line 370, ../../../app/stylesheets/screen.scss */
 form.new_micropost textarea {
   height: 4em;
   margin-bottom: 0;

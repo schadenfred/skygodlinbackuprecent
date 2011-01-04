@@ -1,0 +1,8 @@
+%tr
+  %td.review
+    %span.category= review.category
+    %span.content= review.content
+    %span.timestamp
+      Reviewed #{time_ago_in_words(review.created_at)} ago by #{@user.name}
+      = small_gravatar_for @user
+

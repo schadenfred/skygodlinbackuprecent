@@ -5,17 +5,17 @@
         = gravatar_for @user
         = @user.name
       = render 'follow_form' if signed_in?
-      - unless @user.microposts.empty?
-        %table.microposts{:summary => "User microposts"}
-          = render @microposts
-          = will_paginate @microposts
+      - unless @user.reviews.empty?
+        %table.reviews{:summary => "User reviews"}
+          = render @reviews
+          = will_paginate @reviews
     %td.sidebar.round
       %strong Name
       = @user.name
       %br/
       %strong URL
       = link_to user_path(@user), @user
-      %strong Microposts
-      = @user.microposts.count
+      %strong Reviews
+      = @user.reviews.count
       - render 'shared/stats'
 

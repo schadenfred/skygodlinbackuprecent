@@ -7,6 +7,7 @@ namespace :db do
     make_users
     make_microposts
     make_relationships
+    make_reviews
   end
 end
 
@@ -32,6 +33,24 @@ def make_microposts
     50.times do
       content = Faker::Lorem.sentence(5)
       user.microposts.create!(:content => content)
+    end
+  end
+end
+
+#def make_reviews
+#  User.all(:limit => 6).each do |user|
+#    50.times do
+#      content = Faker::Lorem.sentence(5)
+#      user.reviews.create!(:content => content)
+def make_reviews
+  User.all(:limit => 6).each do |user|
+    50.times do |n|
+      content = Faker::Lorem.sentence(5)
+      reviewer = "#{n+1}"
+      category = Faker::Company.bs
+      user.reviews.create!(:content => content,
+                           :reviewer_id => reviewer,
+                           :category => category)
     end
   end
 end

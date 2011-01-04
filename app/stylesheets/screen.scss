@@ -186,6 +186,10 @@ td.sidebar {
 .profile img.gravatar {
   border: 1px solid #999;
   margin-bottom: -15px;
+
+  td {
+    margin-bottom: 15px;
+  }
 }
 
 div.field, div.actions {
@@ -240,6 +244,78 @@ ul.users {
 .users li {
   list-style: none;
 }
+
+// Reviews
+
+h1.reviews {
+  margin-bottom: 0.3em;
+}
+
+table.reviews {
+  margin-top: 1em;
+
+  tr {
+    height: 70px;
+    td.gravatar {
+      border-top: 1px solid #ccc;
+      vertical-align: top;
+      width: 50px;
+    }
+
+    td.review {
+      border-top: 1px solid #ccc;
+      vertical-align: top;
+      padding-top: 10px;
+
+      span.category {
+        font-weight: bold;
+        font-style: italic
+      }
+
+      span.content {
+        font-weight: normal;
+      }
+
+      span.timestamp {
+        display: block;
+        font-size: 85%;
+        color: #666;
+
+        .gravatar {
+          margin-bottom: -5px;
+        }
+      }
+    }
+  }
+}
+
+div.user_info {
+  img {
+    padding-right: 0.1em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  span.user_name {
+    position: absolute;
+  }
+
+  span.reviews {
+    font-size: 80%;
+  }
+}
+
+form.new_review {
+  margin-bottom: 2em;
+  textarea {
+    height: 4em;
+    margin-bottom: 0;
+  }
+}
+
+// Microposts
 
 h1.micropost {
   margin-bottom: 0.3em;

@@ -5,9 +5,9 @@
       %li= link_to_unless_current "Home", root_path
       |
       - if signed_in?
-        %li= link_to_unless_current "Users", users_path
-        |
-        %li= link_to_unless_current "Profile", current_user
+        / %li= link_to_unless_current "Users", users_path
+        / |
+        %li= link_to_unless_current "Reviews of You", current_user
         |
         %li= link_to_unless_current "Settings", edit_user_path(current_user)
         |
