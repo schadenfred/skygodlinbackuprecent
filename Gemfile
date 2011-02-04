@@ -11,6 +11,7 @@ gem 'autotest'
 gem 'jquery-rails',             '>= 0.2.6'
 gem 'formtastic',               '~>1.1.0'
 gem 'heroku'
+
 group :development do
   gem 'cucumber'
   gem 'rspec-rails', '2.1.0'
