@@ -8,10 +8,11 @@ gem 'haml'
 gem 'haml-rails'
 gem 'compass'
 gem 'autotest'
-gem 'autotest-rails'
 gem 'jquery-rails',             '>= 0.2.6'
-
+gem 'formtastic',               '~>1.1.0'
+gem 'heroku'
 group :development do
+  gem 'cucumber'
   gem 'rspec-rails', '2.1.0'
   gem 'annotate-models', '1.0.4'
   gem 'faker', '0.3.1'
