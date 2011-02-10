@@ -1,3 +1,17 @@
+# == Schema Information
+# Schema version: 20110103070454
+#
+# Table name: reviews
+#
+#  id          :integer         not null, primary key
+#  content     :string(255)
+#  category    :string(255)
+#  user_id     :integer
+#  reviewer_id :integer
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
 class Review < ActiveRecord::Base
   attr_accessible :content, :reviewer_id, :category
 
