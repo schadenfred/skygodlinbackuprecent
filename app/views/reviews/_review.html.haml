@@ -5,4 +5,10 @@
     %span.timestamp
       Reviewed #{time_ago_in_words(review.created_at)} ago by #{@user.name}
       = small_gravatar_for @user
+  - user = review.user rescue User.find(review.user_id)
+  - if current_user?(user)
+    %td
+      = link_to "delete", review, :method => :delete,   |
+        :confirm => "You sure?",                        |
+        :title => review.content                        |
 

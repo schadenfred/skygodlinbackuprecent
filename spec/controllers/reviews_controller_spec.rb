@@ -25,7 +25,7 @@ describe ReviewsController do
     describe "failure" do
 
       before(:each) do
-        @attr = { :content => "" }
+        @attr = { :content => "  " }
       end
 
       it "should not create a review" do
@@ -60,6 +60,38 @@ describe ReviewsController do
       it "should have a flash message" do
         post :create, :review => @attr
         flash[:success].should =~ /review created/i
+      end
+    end
+  end
+
+  describe "DELETE 'destroy'" do
+
+    describe "for an unauthorized user" do
+
+      before(:each) do
+        @user = Factory(:user)
+        wrong_user = Factory(:user, :email => Factory.next(:email))
+        test_sign_in(wrong_user)
+        @review = factory(:review, :user => @user)
+      end
+
+      it "should deny access" do
+        delete :destroy, :id => @review
+        response.should redirect_to(root_path)
+      end
+    end
+
+    describe "for an authorized user" do
+
+      before(:each) do
+        @user = test_sign_in(Factory(:user))
+        @review = Factory(:review, :user => @user)
+      end
+
+      it "should destroy the review" do
+        lambda do
+          delete :destroy, :id => @review
+        end.should change(Review, :count).by(-1)
       end
     end
   end

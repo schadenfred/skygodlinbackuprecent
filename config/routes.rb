@@ -1,14 +1,8 @@
 Skygodlin::Application.routes.draw do
 
-  resources :users do
-    member do
-      get :following, :followers
-    end
-  end
-
+  resources :users
   resources :sessions,      :only => [:new, :create, :destroy]
   resources :reviews,       :only => [:create, :destroy]
-  resources :relationships, :only => [:create, :destroy]
 
   match '/signup',        :to => 'users#new'
 

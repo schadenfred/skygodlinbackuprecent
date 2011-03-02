@@ -172,6 +172,24 @@ describe User do
         Review.find_by_id
       end
     end
+
+    describe "status feed" do
+
+      it "should have a feed" do
+        @user.should respond_to(:feed)
+      end
+
+      it "should include the user's reviews" do
+        @user.feed.include?(@rv1).should be_true
+        @user.feed.include?(@rv2).should be_true
+      end
+
+      it "should not include a different user's reviews" do
+        rv3 = Factory(:review,
+                      :user => Factory(:user, :email => Factory.next(:email)))
+        @user.feed.include?(rv3).should be_false
+      end
+    end
   end
 end
 
