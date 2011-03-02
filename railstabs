@@ -1,0 +1,69 @@
+#Written by GNOME Terminal 2.30.2
+
+[GNOME Terminal Configuration]
+Version=1
+CompatVersion=1
+FactoryEnabled=true
+Windows=Window0;Window1;
+
+[Window0]
+MenubarVisible=true
+Role=gnome-terminal-window-2754--618914462-1298626727
+ActiveTerminal=Terminal0x8e30a00
+Geometry=80x24+0+239
+Terminals=Terminal0x8e1fb70;Terminal0x8e36800;Terminal0x8e3af00;Terminal0x8e2d400;Terminal0x8e30a00;
+
+[Terminal0x8e1fb70]
+ProfileID=Default
+Command='bash' '-c' 'autotest'
+WorkingDirectory=/home/frederick/Dropbox/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Terminal0x8e36800]
+ProfileID=Default
+Command='bash' '-c' 'compass watch'
+WorkingDirectory=/home/frederick/Dropbox/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Terminal0x8e3af00]
+ProfileID=Default
+Command='tail' '-f' 'log/development.log'
+WorkingDirectory=/home/frederick/Dropbox/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Terminal0x8e2d400]
+ProfileID=Default
+Command='bash' '-c' 'spork'
+WorkingDirectory=/home/frederick/Dropbox/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Terminal0x8e30a00]
+ProfileID=Default
+Command='bash' '-c' 'rails server'
+WorkingDirectory=/home/frederick/Dropbox/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Window1]
+MenubarVisible=true
+Role=gnome-terminal-window-1654-1377321097-1298948217
+ActiveTerminal=Terminal0x8e67900
+Geometry=80x38+706+36
+Terminals=Terminal0x8e67900;
+
+[Terminal0x8e67900]
+ProfileID=Default
+WorkingDirectory=/home/frederick/Dropbox/skygodlin
+Zoom=1
+Width=80
+Height=38
+
