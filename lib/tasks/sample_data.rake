@@ -5,8 +5,8 @@ namespace :db do
   task :populate => :environment do
     Rake::Task['db:reset'].invoke
     make_users
-    make_relationships
     make_reviews
+    make_relationships
   end
 end
 
@@ -31,10 +31,8 @@ def make_reviews
   User.all(:limit => 6).each do |user|
     50.times do |n|
       content = Faker::Lorem.sentence(5)
-      reviewer = "2"
       category = Faker::Company.bs
       user.reviews.create!(:content => content,
-                           :reviewer_id => reviewer,
                            :category => category)
     end
   end

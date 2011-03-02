@@ -1,6 +1,11 @@
 Skygodlin::Application.routes.draw do
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   resources :sessions,      :only => [:new, :create, :destroy]
   resources :reviews,       :only => [:create, :destroy]
 
