@@ -303,69 +303,17 @@ form.new_review textarea {
   margin-bottom: 0;
 }
 
-/* line 320, ../../../app/stylesheets/screen.scss */
-h1.micropost {
-  margin-bottom: 0.3em;
-}
-
-/* line 324, ../../../app/stylesheets/screen.scss */
-table.microposts {
-  margin-top: 1em;
-}
-
-/* line 328, ../../../app/stylesheets/screen.scss */
-table.microposts tr {
-  height: 70px;
-}
-
-/* line 332, ../../../app/stylesheets/screen.scss */
-table.microposts tr td.gravatar {
-  border-top: 1px solid #ccc;
-  vertical-align: top;
-  width: 50px;
-}
-
-/* line 338, ../../../app/stylesheets/screen.scss */
-table.microposts tr td.micropost {
-  border-top: 1px solid #ccc;
-  vertical-align: top;
-  padding-top: 10px;
-}
-
-/* line 344, ../../../app/stylesheets/screen.scss */
-table.microposts tr td.micropost span.timestamp {
-  display: block;
-  font-size: 85%;
-  color: #666;
-}
-
-/* line 350, ../../../app/stylesheets/screen.scss */
+/* line 318, ../../../app/stylesheets/screen.scss */
 div.user_info img {
   padding-right: 0.1em;
 }
 
-/* line 354, ../../../app/stylesheets/screen.scss */
+/* line 322, ../../../app/stylesheets/screen.scss */
 div.user_info a {
   text-decoration: none;
 }
 
-/* line 358, ../../../app/stylesheets/screen.scss */
+/* line 326, ../../../app/stylesheets/screen.scss */
 div.user_info span.user_name {
   position: absolute;
-}
-
-/* line 362, ../../../app/stylesheets/screen.scss */
-div.user_info span.microposts {
-  font-size: 80%;
-}
-
-/* line 366, ../../../app/stylesheets/screen.scss */
-form.new_micropost {
-  margin-bottom: 2em;
-}
-
-/* line 370, ../../../app/stylesheets/screen.scss */
-form.new_micropost textarea {
-  height: 4em;
-  margin-bottom: 0;
 }

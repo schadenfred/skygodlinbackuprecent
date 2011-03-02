@@ -19,8 +19,6 @@ class User < ActiveRecord::Base
 
   has_many :reviews,
     :dependent => :destroy
-  has_many :microposts,
-    :dependent => :destroy
   has_many :relationships,
     :foreign_key => "follower_id",
     :dependent => :destroy
@@ -76,7 +74,7 @@ class User < ActiveRecord::Base
   end
 
   def feed
-    Micropost.from_users_followed_by(self)
+    Review.where("user_id = ?", id)
   end
 
   private

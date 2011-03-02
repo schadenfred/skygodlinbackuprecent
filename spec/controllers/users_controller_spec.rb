@@ -92,6 +92,14 @@ describe UsersController do
       get :show, :id => @user
       response.should have_selector("h1>img", :class => "gravatar")
     end
+
+    it "should show the user's reviews" do
+      rv1 = Factory(:review, :user => @user, :content => "Foo bar")
+      rv2 = Factory(:review, :user => @user, :content => "Baz quux")
+      get :show, :id => @user
+      response.should have_selector("span.content", :content => rv1.content)
+      response.should have_selector("span.content", :content => rv2.content)
+    end
   end
 
   describe "GET 'new'" do
@@ -127,8 +135,6 @@ describe UsersController do
       response.should have_selector("input[name='user[password_confirmation]']
                                           [type='password']")
     end
-
-
   end
 
 

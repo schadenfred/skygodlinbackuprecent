@@ -46,7 +46,7 @@ describe "Users" do
         response.should have_selector("div.flash.error", :content => "Invalid")
       end
     end
-#       test_sign_in(Factory(:user))
+
     describe "success" do
       it "should sign a user in and out" do
         integration_sign_in(Factory(:user))
