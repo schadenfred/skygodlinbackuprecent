@@ -9,3 +9,8 @@ Factory.sequence :email do |n|
   "person-#{n}@example.com"
 end
 
+Factory.define :review do |review|
+  review.content "Foo bar"
+  review.association :user
+end
+

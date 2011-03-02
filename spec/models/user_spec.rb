@@ -149,5 +149,29 @@ describe User do
       @user.should be_admin
     end
   end
+
+  describe "review associations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+      @rv1 = Factory(:review, :user => @user, :created_at => 1.day.ago)
+      @rv2 = Factory(:review, :user => @user, :created_at => 1.hour.ago)
+    end
+
+    it "should have a reviews attribute" do
+      @user.should respond_to(:reviews)
+    end
+
+    it "should have the right reviews in the right order" do
+      @user.reviews.should == [@rv2,@rv1]
+    end
+
+    it "should destroy associated reviews" do
+      @user.destroy
+      [@rv1, @rv2].each do |review|
+        Review.find_by_id
+      end
+    end
+  end
 end
 

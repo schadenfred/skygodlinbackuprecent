@@ -13,10 +13,9 @@
 #
 
 class Review < ActiveRecord::Base
-  attr_accessible :content, :reviewer_id, :category
+  attr_accessible :content
 
   belongs_to :user
-  belongs_to :reviewer, :class_name => "User"
 
   validates :content, :presence => true, :length => { :maximum => 140 }
   validates :user_id, :presence => true
