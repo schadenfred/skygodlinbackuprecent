@@ -25,13 +25,13 @@ describe ReviewsController do
     describe "failure" do
 
       before(:each) do
-        @attr = { :content => "  " }
+        @attr = { :content => "" }
       end
 
       it "should not create a review" do
         lambda do
           post :create, :review => @attr
-        end.should_not change(Reviews, :count)
+        end.should_not change(Review, :count)
       end
 
       it "should render the home page" do
@@ -72,7 +72,7 @@ describe ReviewsController do
         @user = Factory(:user)
         wrong_user = Factory(:user, :email => Factory.next(:email))
         test_sign_in(wrong_user)
-        @review = factory(:review, :user => @user)
+        @review = Factory(:review, :user => @user)
       end
 
       it "should deny access" do

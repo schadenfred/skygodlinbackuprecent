@@ -17,7 +17,7 @@ class Review < ActiveRecord::Base
 
   belongs_to :user
 
-  validates :content, :presence => true, :length => { :maximum => 140 }
+  validates :content, :presence => true, :length => { :within => 3..140 }
   validates :user_id, :presence => true
 
   default_scope :order => 'reviews.created_at DESC'
