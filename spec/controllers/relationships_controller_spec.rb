@@ -33,8 +33,7 @@ describe RelationshipsController do
       lambda do
         xhr :post, :create, :relationship => { :followed_id => @followed }
         response.should be_success
-        end.should change(Relationship, :count).by(1)
-      end
+      end.should change(Relationship, :count).by(1)
     end
   end
 
