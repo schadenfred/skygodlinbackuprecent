@@ -74,7 +74,7 @@ class User < ActiveRecord::Base
   end
 
   def feed
-    Review.where("user_id = ?", id)
+    Review.from_users_followed_by(self)
   end
 
   private

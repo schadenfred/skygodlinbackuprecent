@@ -180,14 +180,21 @@ describe User do
       end
 
       it "should include the user's reviews" do
-        @user.feed.include?(@rv1).should be_true
-        @user.feed.include?(@rv2).should be_true
+        @user.feed.should include(@rv1)
+        @user.feed.should include(@rv2)
       end
 
       it "should not include a different user's reviews" do
         rv3 = Factory(:review,
                       :user => Factory(:user, :email => Factory.next(:email)))
-        @user.feed.include?(rv3).should be_false
+        @user.feed.should_not include(rv3)
+      end
+
+      it "should include the reviews of followed users" do
+        followed = Factory(:user, :email => Factory.next(:email))
+        mp3 = Factory(:review, :user => followed)
+        @user.follow!(followed)
+        @user.feed.should include(mp3)
       end
     end
   end
