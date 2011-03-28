@@ -8,6 +8,10 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Skygodlin
   class Application < Rails::Application
+
+    # Revert to old migration numbering scheme (new migrations start with 1)
+
+    config.active_record.timestamped migrations = false
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
