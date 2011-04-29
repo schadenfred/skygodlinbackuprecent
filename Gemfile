@@ -1,28 +1,29 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
-gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
-gem 'gravatar_image_tag', '0.1.0'
+gem 'rails', '3.0.7'
+gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
+gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
 gem 'haml'
 gem 'haml-rails'
 gem 'compass'
-gem 'autotest'
-gem 'jquery-rails',             '>= 0.2.6'
-gem 'formtastic',               '~>1.1.0'
+gem 'jquery-rails'
+gem 'formtastic'
 gem 'heroku'
 
 group :development do
   gem 'cucumber'
-  gem 'rspec-rails', '2.1.0'
+  gem 'rspec-rails', '2.5.0'
   gem 'annotate-models', '1.0.4'
   gem 'faker', '0.3.1'
 end
 
 group :test do
-  gem 'rspec', '2.1.0'
+  gem 'rspec', '2.5.0'
   gem 'webrat', '0.7.1'
-  gem 'spork', '0.8.4'
+  gem 'spork', '0.9.0.rc5'
   gem 'factory_girl_rails', '1.0'
+  gem 'autotest'
+  gem 'autotest-rails'
 end
 

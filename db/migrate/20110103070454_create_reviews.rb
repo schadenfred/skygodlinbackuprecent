@@ -4,7 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.string :content
       t.string :category
       t.integer :user_id
-      t.integer :reviewer_id, class => :user
+      t.integer :reviewer_id, :class_name => 'User'
 
       t.timestamps
     end
