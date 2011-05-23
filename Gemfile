@@ -23,7 +23,8 @@ group :test do
   gem 'webrat', '0.7.1'
   gem 'spork', '0.9.0.rc5'
   gem 'factory_girl_rails', '1.0'
-  gem 'autotest'
-  gem 'autotest-rails'
+  gem 'autotest', '4.4.6'
+  gem 'autotest-rails-pure', '4.1.2'
+  gem 'autotest-notification'
 end
 

@@ -33,8 +33,9 @@ GEM
     arel (2.0.9)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
-    autotest-rails (4.1.0)
-      ZenTest
+    autotest-notification (2.3.1)
+      autotest (~> 4.3)
+    autotest-rails-pure (4.1.2)
     builder (2.1.2)
     compass (0.10.6)
       haml (>= 3.0.4)
@@ -138,8 +139,9 @@ PLATFORMS
 
 DEPENDENCIES
   annotate-models (= 1.0.4)
-  autotest
-  autotest-rails
+  autotest (= 4.4.6)
+  autotest-notification
+  autotest-rails-pure (= 4.1.2)
   compass
   cucumber
   factory_girl_rails (= 1.0)

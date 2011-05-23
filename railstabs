@@ -1,69 +1,73 @@
-#Written by GNOME Terminal 2.30.2
+#Written by GNOME Terminal 2.32.1
 
 [GNOME Terminal Configuration]
 Version=1
 CompatVersion=1
-FactoryEnabled=true
-Windows=Window0;Window1;
+Windows=Window0;Window1;Window2;
 
 [Window0]
 MenubarVisible=true
-Role=gnome-terminal-window-2754--618914462-1298626727
-ActiveTerminal=Terminal0x8e30a00
-Geometry=80x24+0+239
-Terminals=Terminal0x8e1fb70;Terminal0x8e36800;Terminal0x8e3af00;Terminal0x8e2d400;Terminal0x8e30a00;
+Role=gnome-terminal-window-2294--2137927479-1305747315
+ActiveTerminal=Terminal0x8848448
+Geometry=80x23+66+328
+Terminals=Terminal0x8848448;
 
-[Terminal0x8e1fb70]
+[Terminal0x8848448]
 ProfileID=Default
-Command='bash' '-c' 'autotest'
-WorkingDirectory=/home/frederick/Dropbox/skygodlin
+WorkingDirectory=/home/frederick
 Zoom=1
 Width=80
-Height=24
-
-[Terminal0x8e36800]
-ProfileID=Default
-Command='bash' '-c' 'compass watch'
-WorkingDirectory=/home/frederick/Dropbox/skygodlin
-Zoom=1
-Width=80
-Height=24
-
-[Terminal0x8e3af00]
-ProfileID=Default
-Command='tail' '-f' 'log/development.log'
-WorkingDirectory=/home/frederick/Dropbox/skygodlin
-Zoom=1
-Width=80
-Height=24
-
-[Terminal0x8e2d400]
-ProfileID=Default
-Command='bash' '-c' 'spork'
-WorkingDirectory=/home/frederick/Dropbox/skygodlin
-Zoom=1
-Width=80
-Height=24
-
-[Terminal0x8e30a00]
-ProfileID=Default
-Command='bash' '-c' 'rails server'
-WorkingDirectory=/home/frederick/Dropbox/skygodlin
-Zoom=1
-Width=80
-Height=24
+Height=23
 
 [Window1]
 MenubarVisible=true
-Role=gnome-terminal-window-1654-1377321097-1298948217
-ActiveTerminal=Terminal0x8e67900
-Geometry=80x38+706+36
-Terminals=Terminal0x8e67900;
+Role=gnome-terminal-window-2509--1530141921-1305743891
+ActiveTerminal=Terminal0x8983400
+Geometry=80x24+709+24
+Terminals=Terminal0x8983400;
 
-[Terminal0x8e67900]
+[Terminal0x8983400]
 ProfileID=Default
-WorkingDirectory=/home/frederick/Dropbox/skygodlin
+WorkingDirectory=/home/frederick/work/skygodlin
 Zoom=1
 Width=80
-Height=38
+Height=24
 
+[Window2]
+MenubarVisible=true
+Role=gnome-terminal-window-2049-1570184611-1305747280
+ActiveTerminal=Terminal0x89ad6f8
+Geometry=80x39+0+24
+Terminals=Terminal0x8994800;Terminal0x899e818;Terminal0x89b0cf8;Terminal0x89ad6f8;
+
+[Terminal0x8994800]
+ProfileID=Default
+Command='bash' '-c' 'rails server'
+WorkingDirectory=/home/frederick/work/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Terminal0x899e818]
+ProfileID=Default
+Command='bash' '-c' 'compass watch'
+WorkingDirectory=/home/frederick/work/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Terminal0x89b0cf8]
+ProfileID=Default
+Command='tail' '-f' 'log/development.log'
+WorkingDirectory=/home/frederick/work/skygodlin
+Zoom=1
+Width=80
+Height=24
+
+[Terminal0x89ad6f8]
+ProfileID=Default
+Command='bash' '-c' 'autotest'
+WorkingDirectory=/home/frederick/work/skygodlin
+Zoom=1
+Width=80
+Height=39
