@@ -10,12 +10,12 @@ gem 'compass'
 gem 'jquery-rails'
 gem 'formtastic'
 gem 'heroku'
+gem 'faker', '0.3.1'
 
 group :development do
   gem 'cucumber'
   gem 'rspec-rails', '2.5.0'
   gem 'annotate-models', '1.0.4'
-  gem 'faker', '0.3.1'
 end
 
 group :test do
